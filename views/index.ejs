@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-  <link rel="stylesheet" href="/css/style.css">
+  <%- include("partials/head", { title }) %>
 </head>
 <body class="min-h-screen bg-indigo-950 text-slate-200 flex items-center justify-center p-6">
   <main class="max-w-xl text-center">
@@ -13,6 +10,11 @@
     <p class="mt-4 text-lg text-slate-400">
       Express, EJS and Tailwind are up and running.
     </p>
+    <form action="/logout" method="POST" class="mt-10">
+      <button type="submit" class="rounded-lg border border-slate-600 px-4 py-2 text-sm text-slate-300 hover:border-slate-400 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-200">
+        Sign out
+      </button>
+    </form>
   </main>
 </body>
 </html>
